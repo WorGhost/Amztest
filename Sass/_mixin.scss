@@ -1,0 +1,42 @@
+//Small
+@mixin sm {
+    @media (min-width: #{$screen-sm-min}) {
+        @content;
+    }
+}
+
+//Medium
+@mixin md {
+    @media (min-width: #{$screen-md-min}) {
+        @content;
+    }
+}
+
+//large
+@mixin lg {
+    @media (min-width: #{$screen-lg-min}) {
+        @content;
+    }
+}
+
+//VLarge
+@mixin xl {
+    @media (min-width: #{$screen-xl-min}) {
+        @content;
+    }
+}
+
+@mixin flex($justify, $align:center, $direction:row, $wrap:wrap) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+}
+
+//grid mixin
+@mixin grid ($columns, $gap: 0px) {
+    display: grid;
+    grid-gap: $gap;
+    grid-template-columns: repeat($columns, 1fr);
+}
